@@ -1,10 +1,12 @@
 import React from "react";
+import { Container, Snakbar } from "@material-ui/core";
+import Header from "./components/Headers";
 
 function App() {
   return (
-    <div className="App">
-      <h1>I am in app</h1>
-    </div>
+    <Container className="tweets-simulator" max-width="false">
+      <Header></Header>
+    </Container>
   );
 }
 
