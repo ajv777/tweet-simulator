@@ -1,0 +1,45 @@
+.form-send-tweet {
+  background-color: #fbfcff;
+  border: 1px solid #273469;
+  padding: 30px;
+  width: 800px;
+
+  h2 {
+    color: #273469;
+  }
+
+  &-title {
+    margin-top: 0;
+  }
+
+  &-form {
+    .MuiFormControl-root {
+      width: 100%;
+
+      .MuiButtonBase-root {
+        width: 100%;
+        margin-top: 10px;
+      }
+      .MuiButton-label {
+        background-color: #273469;
+        color: white;
+        padding: 10px;
+        width: 20%;
+        border-radius: 5px;
+      }
+    }
+
+    .MuiInputBase-root {
+      width: 100%;
+    }
+
+    &-name {
+      width: 30%;
+    }
+
+    &-textarea {
+      width: 100%;
+      padding-top: 5px;
+    }
+  }
+}
