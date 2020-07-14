@@ -5,6 +5,12 @@ body {
     sans-serif;
   background-color: #273469;
   min-height: 100vh;
+  .MuiSnackbarContent-root {
+    background-color: white;
+    opacity: 0.8px;
+    color: #273469;
+    border-radius: 5px;
+  }
 }
 
 code {

@@ -26,7 +26,7 @@ function App() {
       <Header />
       <SendTweet setToastProps={setToastProps} allTweets={allTweets} />
       <Snackbar
-        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
         open={toastProps.open}
         autoHideDuration={1000}
         message={<span id="message-toast">{toastProps.text}</span>}
