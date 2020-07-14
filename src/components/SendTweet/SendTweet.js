@@ -8,7 +8,10 @@ import FormSendTweet from "../FormSendTweet";
 import "./SendTweet.scss";
 import { TWEETS_STORAGE } from "../../utils/constants";
 
-export default function SendTweet() {
+export default function SendTweet(props) {
+  // Props from App.js
+  const { setToastProps, allTweets } = props;
+
   const [isOpenModal, setIsOpenModal] = useState(false);
 
   const openModal = () => {
@@ -27,14 +30,26 @@ export default function SendTweet() {
     const { user, tweet } = formValue;
     let allTweetsArray = [];
 
+    if (allTweets) {
+      allTweetsArray = allTweets;
+    }
+
     if (!user || !tweet) {
-      console.log("Warning: all fields are required");
+      // console.log("Warning: all fields are required");
+      setToastProps({
+        open: true,
+        text: "Warning: all fields are required",
+      });
     } else {
       formValue.time = moment();
       allTweetsArray.push(formValue);
       // setItem (key, value)
       localStorage.setItem(TWEETS_STORAGE, JSON.stringify(allTweetsArray));
-      console.log("Tweet send successfully");
+      // console.log("Tweet send successfully");
+      setToastProps({
+        open: true,
+        text: "Tweet send successfully",
+      });
       closeModal();
     }
     // clean form after send
