@@ -3,6 +3,7 @@ import { Container, Snackbar } from "@material-ui/core";
 
 import Header from "./components/Headers";
 import SendTweet from "./components/SendTweet";
+import ListTweets from "./components/ListTweets";
 import { TWEETS_STORAGE } from "./utils/constants";
 
 function App() {
@@ -19,12 +20,14 @@ function App() {
     setAllTweets(allTweetsArray);
   }, []);
 
+  // Get all tweets and send to ListTweets by props
   // console.log("get all tweets:", allTweets);
 
   return (
     <Container className="tweets-simulator" max-width="false">
       <Header />
       <SendTweet setToastProps={setToastProps} allTweets={allTweets} />
+      <ListTweets allTweets={allTweets} />
       <Snackbar
         anchorOrigin={{ vertical: "top", horizontal: "right" }}
         open={toastProps.open}
