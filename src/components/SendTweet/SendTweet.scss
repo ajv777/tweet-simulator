@@ -3,3 +3,10 @@
   right: 40px;
   bottom: 40px;
 }
+
+@media (max-width: 900px) {
+  .send-tweet {
+    position: static;
+    margin-bottom: 40px;
+  }
+}
