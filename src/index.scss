@@ -7,8 +7,13 @@ body {
   min-height: 100vh;
   .MuiSnackbarContent-root {
     background-color: white;
-    opacity: 0.8px;
+    opacity: 0.8;
     color: #273469;
+    border-radius: 5px;
+  }
+  .MuiPaper-root {
+    background-color: white;
+    opacity: 0.8;
     border-radius: 5px;
   }
 }

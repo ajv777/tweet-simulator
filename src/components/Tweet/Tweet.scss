@@ -1,0 +1,26 @@
+.card-tweet {
+  position: relative;
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #273469;
+    h3 {
+      margin: 0;
+    }
+    svg {
+      font-size: 30px;
+    }
+    svg:hover {
+      fill: #f00;
+      cursor: pointer;
+    }
+  }
+  &-date {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 12px;
+  }
+}

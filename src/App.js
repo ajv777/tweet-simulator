@@ -21,7 +21,7 @@ function App() {
   }, []);
 
   // Get all tweets and send to ListTweets by props
-  // console.log("get all tweets:", allTweets);
+  console.log("get all tweets:", allTweets);
 
   return (
     <Container className="tweets-simulator" max-width="false">
